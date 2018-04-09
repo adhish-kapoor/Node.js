@@ -1,8 +1,0 @@
-//os module
-var os=require("os")
-
-var totalmemory=os.totalmem() //method for total memory
-var freememory=os.freemem()   //method for free memory
-
-console.log(totalmemory)
-console.log(freememory)
