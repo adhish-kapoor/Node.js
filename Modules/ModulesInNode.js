@@ -36,3 +36,31 @@ emitter.on('MessageLogged',function(EventArgs){
 })
 //Raise an event
 emitter.emit('MessageLogged',{id:1,name:"Adhish"}); //second argument as object
+//1.---http module
+const http=require("http")
+const server=http.createServer();
+//Register listener or handler
+server.on('connection',(Socket)=>{
+    console.log("New Connection")
+})
+server.listen(3000)
+
+console.log("Listening on port 3000")
+
+//2.
+const http=require("http")
+const server=http.createServer((req,res)=>{
+    if(req.url==='/')
+    {
+        res.write("Hello world")
+        res.end()
+    }
+});
+//Register listener or handler
+server.on('connection',(Socket)=>{
+    console.log("New Connection")
+})
+server.listen(3000)
+
+console.log("Listening on port 3000")
+
